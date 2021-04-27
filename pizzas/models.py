@@ -9,6 +9,6 @@ class Pizza(models.Model):
         return self.name
 
 
-class Toppings(models.Model):
+class Topping(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
     name = models.TextField()
