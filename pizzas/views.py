@@ -8,7 +8,7 @@ def index(request):
     return render(request, 'pizzas/index.html')
 
 def pizzas(request):
-    pizzas = Pizza.objects.order_by('date_added')
+    pizzas = Pizza.objects
 
     context = {'pizzas':pizzas}
     return render(request, 'pizzas/pizzas.html', context)
@@ -16,7 +16,7 @@ def pizzas(request):
 
 def pizza(request, pizza_id):
     pizza = Pizza.objects.get(id = pizza_id)
-    toppings = pizza.entry_set.order_by('-date_added')
+    toppings = pizza.entry_set
 
     context = {'pizza':pizza, 'toppings':toppings}
 
