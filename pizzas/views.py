@@ -4,7 +4,7 @@ from .models import Pizza, Topping
 # Create your views here.
 
 def index(request):
-    ''' The home page for learning log. '''
+    ''' The home page for da pizzas. '''
     return render(request, 'pizzas/index.html')
 
 def pizzas(request):
