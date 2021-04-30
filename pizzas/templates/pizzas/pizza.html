@@ -14,8 +14,10 @@
     {% endfor %}
 </ul>
 
+
+<p><a href="{% url 'pizzas:new_comment' pizza.id %}">Add a new comment</a></p>
+
 <ul>
-    <a href="{% url 'pizzas:new_comment' %}">Add a new comment</a>
     {% for comment in comments %}
     <li>
         <p> {{comment}}</p>
