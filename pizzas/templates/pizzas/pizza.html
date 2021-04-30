@@ -4,6 +4,10 @@
 
 <p>Pizza: {{ pizza }}</p>
 
+<p><img src="{{ pizza.image.url }}" width="200" height="200"></p>
+
+<p>Toppings</p>
+
 <ul>
     {% for topping in toppings %}
     <li>
@@ -14,6 +18,8 @@
     {% endfor %}
 </ul>
 
+
+<p>Comments</p>
 
 <p><a href="{% url 'pizzas:new_comment' pizza.id %}">Add a new comment</a></p>
 
