@@ -15,3 +15,11 @@ class Topping(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Comment(models.Model):
+    pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
+    comment = models.TextField()
+
+    def __str__(self):
+        return self.comment
