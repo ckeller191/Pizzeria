@@ -2,9 +2,11 @@
 
 {% block content %}
 
+<p> <a href="{% url 'pizzas:pizza' pizza.id %}">{{ pizza }}</a></p>
+
 <p> Add a new comment: </p>
 
-<form action="{% url 'pizzas:new_comment' %}" method='post'>
+<form action="{% url 'pizzas:new_comment' pizza.id %}" method='post'>
 
     {% csrf_token %}
 
